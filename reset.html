@@ -8,12 +8,12 @@
     <script>
         let uri = window.location.href
         let resetmail= uri.substring(uri.indexOf('?') + 1, uri.lastIndexOf('?'));
-        console.log(resetmail);
+        console.log(resetmail)
         async function activate(resetmail) {
             
             
               try { 
-                  let fdata = await fetch(`https://nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
+                  let fdata = await fetch(`https:/nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
                     method: "PUT",
                     
                     headers: {
