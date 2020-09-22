@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pass change</title>
+</head>
+<body>
+    <script>
+        let uri = window.location.href
+        let resetmail= uri.substring(uri.indexOf('?') + 1, uri.lastIndexOf('?'));
+        console.log(resetmail);
+        async function activate(resetmail) {
+            
+            
+              try { 
+                  let fdata = await fetch(`http://localhost:3000/reset/${resetmail}`, {
+                    method: "PUT",
+                    
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
+                 fdata = await fdata.json()
+                alert("check mail for your new password");
+            }
+                catch(err){
+                    console.log(err)
+                }
+            
+        }
+        activate(resetmail);
+    </script>
+</body>
+</html>
