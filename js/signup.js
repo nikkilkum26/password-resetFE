@@ -3,7 +3,7 @@ async function signup() {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value
     }
-    let signupp = await fetch("http://localhost:3000/register", {
+    let signupp = await fetch("https://nodejs-passwordreset.herokuapp.com/register", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
