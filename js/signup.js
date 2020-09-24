@@ -1,4 +1,4 @@
-async function signup() {
+async function signUp() {
     let data = {
         email: document.getElementById("InputEmail1").value,
         password: document.getElementById("InputPassword1").value
@@ -12,5 +12,5 @@ async function signup() {
     })
     let resp = await signupp.json()
 
-    alert("Account Created Go to Login page")
+    alert(resp.message)
 }
