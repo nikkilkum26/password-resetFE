@@ -12,5 +12,5 @@ async function signUp() {
     })
     let resp = await signupp.json()
 
-    alert(resp.message)
+    alert(resp.message + "Go to Login Page")
 }
