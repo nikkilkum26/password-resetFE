@@ -12,5 +12,5 @@ async function signup() {
     })
     let resp = await signupp.json()
 
-    alert(resp.message)
+    alert("Account Created Go to Login page")
 }
