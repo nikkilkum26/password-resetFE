@@ -1,7 +1,7 @@
 async function signup() {
     let data = {
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+        email: document.getElementById("InputEmail1").value,
+        password: document.getElementById("InputPassword1").value
     }
     let signupp = await fetch("https://nodejs-passwordreset.herokuapp.com/signup", {
         method: "POST",
