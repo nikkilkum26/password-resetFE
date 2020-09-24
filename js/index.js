@@ -14,7 +14,7 @@ async function signIn(){
     if(resp.token){
         localStorage.setItem("tokens",resp.token)
         
-        location.href ="/loggeddIn.html"
+        location.href ="https://urlshortner53.herokuapp.com/urlshrt"
     }else{
         alert(resp.message)
     }
