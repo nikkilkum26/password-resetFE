@@ -14,7 +14,7 @@
         async function activate(resetmail) {
             
             
-              try { 
+              if(url) { 
                   let fdata = await fetch(`https:/nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
                     method: "PUT",
                     body: JSON.stringify({
@@ -26,10 +26,8 @@
                 });
                  let data = await fdata.json()
                 alert("check mail for your new password "+data);
-            }
-                catch(err){
-                    console.log(err)
-                }
+            
+                
             
         }
         activate(resetmail);
