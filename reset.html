@@ -7,7 +7,8 @@
 <body>
     <script>
         let url = window.location
-        var resetmail = new URLSearchParams(url).get('access_token');
+        let resetmail=url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
+        //var resetmail = new URLSearchParams(url).get('access_token');
         //let resetmail= uri.substring(uri.indexOf('?') + 1, uri.lastIndexOf('?'));
         console.log(resetmail)
         async function activate(resetmail) {
