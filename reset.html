@@ -13,9 +13,9 @@
         console.log(resetmail)
         async function activate(resetmail) {
             
-            
-              
-                  let fdata = await fetch(`http://localhost:3000/reset/${resetmail}`, {
+           // https://nodejs-passwordreset.herokuapp.com/
+              //http://localhost:3000/
+                  let fdata = await fetch(`https://nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
                     method: "PUT",
                     body: JSON.stringify({
                         resetmail
