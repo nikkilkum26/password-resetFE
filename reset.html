@@ -6,8 +6,9 @@
 </head>
 <body>
     <script>
-        let uri = window.location.href
-        let resetmail= uri.substring(uri.indexOf('?') + 1, uri.lastIndexOf('?'));
+        let url = window.location
+        var resetmail = new URLSearchParams(window.location.hash).get('access_token');
+        //let resetmail= uri.substring(uri.indexOf('?') + 1, uri.lastIndexOf('?'));
         console.log(resetmail)
         async function activate(resetmail) {
             
