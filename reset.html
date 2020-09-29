@@ -11,51 +11,26 @@
         //var resetmail = new URLSearchParams(url).get('access_token');
         //let resetmail= uri.substring(uri.indexOf('?') + 1, uri.lastIndexOf('?'));
         console.log(resetmail)
-//         async function activate(resetmail) {
+        async function activate(resetmail) {
             
             
-//               if(url) { 
-//                   let fdata = await fetch(`https:/nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
-//                     method: "PUT",
-//                     body: JSON.stringify({
-//                         resetmail
-//                     }),
-//                     headers: {
-//                         "Content-Type": "application/json",
-//                     }
-//                 });
-//                  let data = await fdata.json()
-//                 alert("check mail for your new password "+data);
-            
-//               }  
-            
-//         }
-        async function activate(resetmail){
-
-	{
-		try{
-	       await fetch(`https:/nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
-					method:"PUT",
-                    
-                    headers:{
-                        "Content-Type":"application/json"
+              
+                  let fdata = await fetch(`https:/nodejs-passwordreset.herokuapp.com/reset/${resetmail}`, {
+                    method: "PUT",
+                    body: JSON.stringify({
+                        resetmail
+                    }),
+                    headers: {
+                        "Content-Type": "application/json",
                     }
-			  alert("check mail for your new password ");
-
                 });
-			
-			
-		}
-		catch(err){
-			console.log(err)
-		}
-		
-		
-		
-	}
-
-
-}	
+                 let data = await fdata.json()
+                alert("check mail for your new password ");
+            
+              
+            
+        }
+        
         
         
         
